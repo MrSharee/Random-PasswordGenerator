@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.veryBad {
+  width: 25%;
+  background-color: #dc2626;
+}
+.bad {
+  width: 50%;
+  background-color: #f97316;
+}
+.good {
+  width: 75%;
+  background-color: #eab308;
+}
+.veryGood {
+  width: 100%;
+  background-color: #22c55e;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-vazir: Vazir;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url(../fonts/Vazir.woff2) format(woff2);
+}

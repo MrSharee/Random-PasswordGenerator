@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>گذرواژه ساز حرفه ای</title>
+  </head>
+  <body
+    onload="detectTheme()"
+    class="font-vazir bg-[url(/img/lightPic.jpg)] min-h-screen h-screen bg-cover bg-center bg-fixed flex justify-center items-center dark:bg-[url(/img/darkBackGround.jpg)]"
+  >
+    <main
+      class="flex flex-col justify-between w-92.5 px-8 pt-10 pb-5 bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl h-123.75 rounded-2xl"
+    >
+      <section class="flex flex-row justify-between">
+        <h1 class="text-2xl text-gray-800 dark:text-slate-300">گذرواژه ساز</h1>
+        <button
+          type="button"
+          aria-label="Toggle dark mode"
+          class="text-white cursor-pointer theme-btn"
+        >
+          <i
+            class="text-gray-700 fa fa-moon hover:text-violet-500 dark:text-slate-300"
+          ></i>
+        </button>
+      </section>
+      <section class="flex flex-col gap-3 text-gray-200">
+        <div
+          class="flex flex-row justify-start gap-1.5 text-gray-700 text-sm dark:text-zinc-400"
+        >
+          <h1>طول گذرواژه:</h1>
+          <p class="Pass-Range dark:text-slate-300">۴</p>
+        </div>
+        <input
+          class="self-center w-full h-2 rounded-md appearance-none cursor-pointer range-Input bg-linear-to-r from-violet-500 to-violet-200 dark:bg-linear-to-r dark:from-zinc-600 dark:to-zinc-400"
+          type="range"
+          min="4"
+          max="25"
+          value="4"
+        />
+      </section>
+      <section>
+        <ul class="flex flex-col gap-1">
+          <li class="flex flex-row items-center justify-start gap-2">
+            <input
+              type="checkbox"
+              id="numbers"
+              class="w-4 h-4 cursor-pointer pass-checkbox accent-violet-500 dark:accent-slate-300"
+            />
+            <label
+              for="numbers"
+              class="text-sm text-gray-800 dark:text-zinc-400"
+              >اعداد (۰-۹)</label
+            >
+          </li>
+          <li class="flex flex-row items-center justify-start gap-2">
+            <input
+              type="checkbox"
+              id="small"
+              class="w-4 h-4 cursor-pointer pass-checkbox accent-violet-500 dark:accent-slate-300"
+            />
+            <label for="small" class="text-sm text-gray-800 dark:text-zinc-400"
+              >حروف کوچک (a-z)</label
+            >
+          </li>
+          <li class="flex flex-row items-center justify-start gap-2">
+            <input
+              type="checkbox"
+              id="capital"
+              class="w-4 h-4 cursor-pointer pass-checkbox accent-violet-500 dark:accent-slate-300"
+            />
+            <label
+              for="capital"
+              class="text-sm text-gray-800 dark:text-zinc-400"
+              >حروف بزرگ (A-Z)</label
+            >
+          </li>
+          <li class="flex flex-row items-center justify-start gap-2">
+            <input
+              type="checkbox"
+              id="spacial"
+              class="w-4 h-4 cursor-pointer pass-checkbox accent-violet-500 dark:accent-slate-300"
+            />
+            <label
+              for="spacial"
+              class="text-sm text-gray-800 dark:text-zinc-400"
+              >حروف خاص (!,@,#,$,...)</label
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="flex flex-col justify-center gap-2.5">
+        <div class="flex flex-col h-24">
+          <div
+            class="flex flex-row items-center justify-between p-5 rounded-t-md bg-white/30 backdrop-blur-md"
+          >
+            <h1 class="text-xs text-gray-900">گذرواژه :</h1>
+            <input
+              type="text"
+              placeholder="لطفا روی دکمه ایجاد کلیک کنید"
+              class="w-3/4 text-xs text-center textInput placeholder:text-gray-500 placeholder:text-xs dark:border-white/10 dark:text-zinc-100 dark:placeholder:text-zinc-500 focus:outline-none"
+              value=""
+              disabled
+            />
+            <button class="cursor-pointer">
+              <i
+                class="text-gray-700 fa-regular fa-copy hover:text-violet-500"
+              ></i>
+            </button>
+          </div>
+          <div class="w-full h-1 bg-gray-800 rounded-b-md">
+            <div class="h-full passwordStrength rounded-b-md"></div>
+          </div>
+        </div>
+
+        <button
+          class="generate-Btn flex flex-row-reverse gap-1.5 items-center h-2/5 justify-center text-gray-100 rounded-md cursor-pointer border-2 border-violet-500 bg-violet-500 dark:bg-zinc-700 dark:border-zinc-600/60 dark:border dark:text-zinc-200 dark:hover:bg-zinc-700 dark:hover:text-white dark:hover:border-zinc-700 transition duration-200 hover:bg-transparent hover:text-violet-500 hover:border-violet-500 hover:border"
+        >
+          <i class="fas fa-bolt"></i>
+          <p class="font-vazir">ایجاد</p>
+        </button>
+      </section>
+    </main>
+    <div
+      class="toast-box flex flex-col justify-center bg-amber-50 w-75 h-22.5 left-0 duration-300 -translate-x-81.25 top-6 fixed rounded-t-xl rounded-b-sm dark:bg-zinc-700"
+    >
+      <div
+        class="h-21.5 flex flex-row-reverse justify-between items-center pl-9 pr-3.5"
+      >
+        <div
+          class="flex flex-col justify-between gap-2.5 w-[73%] dark:text-zinc-200"
+        >
+          <h1 class="font-bold">خطا</h1>
+          <p class="text-xs toast-box-content"></p>
+        </div>
+        <div
+          class="flex items-center justify-center w-12 h-12 bg-[#DB2E34] rounded-full"
+        >
+          <i class="text-2xl fa fa-xmark"></i>
+        </div>
+      </div>
+      <div class="bottom-0 w-full h-1 bg-gray-700 rounded-b-xl">
+        <div class="h-full progress bg-[#DB2E34]"></div>
+      </div>
+    </div>
+
+    <script src="./js/PassGenerator.js"></script>
+  </body>
+</html>
